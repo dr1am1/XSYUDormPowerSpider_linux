@@ -50,7 +50,7 @@ templates:
 dormitories:
   - dorm_id: "101640017"
     dorm_name: "1号楼-101"
-    dorm_type: "2"
+    dorm_type: "1"
     low_power_threshold: 10.0
     enabled: true
     description: "宿舍"

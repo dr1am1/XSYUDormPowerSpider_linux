@@ -33,8 +33,8 @@ class PowerMonitorService:
             config_file: YAML配置文件路径
         """
         self.config_file = config_file
-        self.config = self.load_config()
         self.setup_logging()
+        self.config = self.load_config()
         
         # 加载宿舍数据
         self.dormitories = self.load_dormitory_data()

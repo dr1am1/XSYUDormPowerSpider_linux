@@ -33,23 +33,21 @@ class PowerMonitorService:
             config_file: YAML配置文件路径
         """
         self.config_file = config_file
-        self.setup_logging()
-        self.config = self.load_config()
-        
-        # 加载宿舍数据
+        # 先用基础配置初始化logger，防止后面用到self.logger时报错
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
+        self.logger = logging.getLogger(__name__)
+        self.config = self.load_config()      # 先加载配置
+        self.setup_logging()                  # 再根据配置重设日志
         self.dormitories = self.load_dormitory_data()
-        
-        # 记录已发送通知的宿舍，避免重复通知
         self.notified_dorms = set()
-        
-        # 服务状态
         self.is_running = False
         self.scheduler_thread = None
-        
-        # 设置信号处理
+        # 信号处理
         signal.signal(signal.SIGINT, self.signal_handler)
         signal.signal(signal.SIGTERM, self.signal_handler)
-        
         self.logger.info("电费监控服务初始化完成")
     
     def signal_handler(self, signum, frame):

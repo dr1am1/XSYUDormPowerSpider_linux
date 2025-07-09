@@ -84,54 +84,16 @@ dormitories:
     enabled: true
 ```
 
-> **注意：dorm_id、dorm_name、dorm_type 推荐直接从 dorm_rooms_2025.csv 查找和复制，避免填写错误。**
-> 
-> - dorm_id = room_code
-> - dorm_name = building-room_number
-> - dorm_type = dorm_type
->
-> 你可以用 Excel、文本编辑器、或命令行查找，比如：
-> ```bash
-> grep 101 dorm_rooms_2025.csv
-> grep "1号楼" dorm_rooms_2025.csv
-> ```
+> **注意：dorm_id、dorm_name、dorm_type 请直接从 dorm_rooms_2025.csv 查找和复制，避免填写错误。**
+
+
 
 ---
 
-## 📝 常见问题
-
-- **apt源报错/403**：请将`/etc/apt/sources.list`切换为官方源或阿里云源。
-- **pip安装报错 externally-managed-environment**：用`pip install --break-system-packages ...`。
-- **虚拟环境无pip**：激活后用`python -m ensurepip`。
-- **推送不成功**：请检查SENDKEY和宿舍ID是否正确，或将阈值调高测试。
-- **服务无法启动**：用`sudo journalctl -u power-monitor.service -n 50`查看详细日志。
-
----
-
-## 📦 目录结构
-
-```
-XSYUDormPowerSpider_linux/
-├── config.yaml                # 主配置文件
-├── dorm_rooms_2025.csv        # 宿舍数据
-├── install_auto.sh            # 一键自动化部署脚本
-├── power_monitor_service.py   # 主程序
-├── power-monitor.service      # systemd服务模板
-├── requirements_service.txt   # Python依赖
-└── README.md                  # 本说明文件
-```
-
----
-
-## 🏫 适用场景
-- 校园宿舍电费自动监控与推送
-- 需要定时任务、自动化部署的Linux服务器
-- 支持多宿舍、多推送方式
-
----
 
 ## 📢 联系与支持
 如有问题或建议，欢迎在GitHub提issue，或直接联系开发者。
+qq:376742095
 
 ---
 

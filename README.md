@@ -8,7 +8,7 @@
 
 1. **进入项目目录**
    ```bash
-   cd /mnt/c/Users/你的用户名/XSYUDormPowerSpider_linux
+   cd XSYUDormPowerSpider_linux
    ```
 
 2. **赋予自动化脚本执行权限**

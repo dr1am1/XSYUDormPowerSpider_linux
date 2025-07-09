@@ -1,0 +1,21 @@
+# 设置shell脚本保持LF换行符
+*.sh text eol=lf
+
+# 设置Python文件保持LF换行符
+*.py text eol=lf
+
+# 设置YAML文件保持LF换行符
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# 设置service文件保持LF换行符
+*.service text eol=lf
+
+# 设置requirements文件保持LF换行符
+requirements*.txt text eol=lf
+
+# 设置README文件保持LF换行符
+README*.md text eol=lf
+
+# CSV文件保持LF换行符
+*.csv text eol=lf 

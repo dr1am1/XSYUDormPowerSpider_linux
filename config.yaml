@@ -20,7 +20,7 @@ notifications:
   # Server酱通知
   server_chan:
     enabled: true
-    sendkey: "SCT289195TPUDnRdzbYyGixiPS03LjVxs9"
+    sendkey: "你的Server酱sendkey"
     url: "https://sctapi.ftqq.com/{sendkey}.send"
   
   # 自定义Webhook通知
@@ -48,9 +48,9 @@ templates:
 
 # 要监控的宿舍列表
 dormitories:
-  - dorm_id: "9529"
-    dorm_name: "9号楼-529"
-    dorm_type: "1"
-    low_power_threshold: 100.0
+  - dorm_id: "101640017"
+    dorm_name: "1号楼-101"
+    dorm_type: "2"
+    low_power_threshold: 10.0
     enabled: true
     description: "宿舍"
